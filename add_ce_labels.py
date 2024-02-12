@@ -16,7 +16,7 @@ def add_label(pdf_path, x, y, width, height, position):
     pdf[0].insert_image(rect, stream=img)  # Insert image only on the first page
     
     # Compress the PDF here before saving
-    compressed_pdf_bytes = compress_pdf(pdf, 3000)  # Assuming target_size is 200, adjust as necessary
+    compressed_pdf_bytes = compress_pdf(pdf, 3000)  # PDF size target in KB
     
     updated_folder_path = "./updated_pdfs"
     os.makedirs(updated_folder_path, exist_ok=True)
